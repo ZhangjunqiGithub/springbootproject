@@ -1,0 +1,20 @@
+spring:
+  # redis配置
+  redis:
+    host: 192.168.3.6
+    port: 6379
+    password: 123456
+    # client-type: jedis # 默认为lettuce
+    # 还可以进一步配置
+#    jedis:
+#      pool:
+#        enabled: true
+#        max-active: 16
+#        min-idle: 8
+    # lettuce
+    lettuce:
+      pool:
+        max-active: 8 # 最大连接
+        max-idle: 8 # 最大空闲连接
+        min-idle: 0 # 最小空闲连接
+        max-wait: 1000ms # 连接等待时间
